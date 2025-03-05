@@ -11,7 +11,7 @@ interface Props {
   cargo?: string;
 }
 
-const { npm, yarn, pnpm, bun, cargo, deno } = Astro.locals.starlightRoute;
+const { npm, yarn, pnpm, bun, cargo, deno } = Astro.props;
 ---
 
 <Tabs syncKey="cmd">

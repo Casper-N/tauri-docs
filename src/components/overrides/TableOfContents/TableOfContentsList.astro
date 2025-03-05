@@ -8,7 +8,7 @@ interface Props {
   isMobile?: boolean;
 }
 
-const { toc, isMobile = false, depth = 0, collapseLevel = 1 } = Astro.locals.starlightRoute;
+const { toc, isMobile = false, depth = 0, collapseLevel = 1 } = Astro.props;
 ---
 
 <ul class:list={{ isMobile }}>

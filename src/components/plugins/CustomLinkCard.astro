@@ -11,7 +11,7 @@ interface Props extends Omit<HTMLAttributes<'a'>, 'title'> {
   footer?: string;
 }
 
-const { title, description, footer, ...attributes } = Astro.locals.starlightRoute;
+const { title, description, footer, ...attributes } = Astro.props;
 ---
 
 <div class="sl-link-card">

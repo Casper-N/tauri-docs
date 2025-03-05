@@ -5,7 +5,7 @@ interface Props {
   plugin: Plugin;
   showJsLinks?: boolean;
 }
-const { plugin, showJsLinks = true } = Astro.locals.starlightRoute;
+const { plugin, showJsLinks = true } = Astro.props;
 const github = `https://github.com/tauri-apps/plugins-workspace/tree/v2/plugins/${plugin}`;
 const npm = showJsLinks ? `https://www.npmjs.com/package/@tauri-apps/plugin-${plugin}` : undefined;
 const cratesio = `https://crates.io/crates/tauri-plugin-${plugin}`;

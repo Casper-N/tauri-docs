@@ -8,7 +8,7 @@
 interface Props {
   placeholder?: string;
 }
-const { placeholder = 'Search features and community resources...' } = Astro.locals.starlightRoute;
+const { placeholder = 'Search features and community resources...' } = Astro.props;
 
 // TODO: Expose placeholder and title to i18n
 ---
