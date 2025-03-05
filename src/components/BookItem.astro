@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 
-const { image, alt = 'Book Cover', title, author, links = [] } = Astro.props;
+const { image, alt = 'Book Cover', title, author, links = [] } = Astro.locals.starlightRoute;
 
 interface Props {
   image: ImageMetadata;

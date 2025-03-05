@@ -28,10 +28,10 @@ interface Props {
    * overrides the link to release page
    *
    * if the `library` prop is defined, `href` defaults to:
-   * - `${Astro.url.origin}/release/${Astro.props.library}/v${Astro.props.version}`
+   * - `${Astro.url.origin}/release/${Astro.locals.starlightRoute.library}/v${Astro.locals.starlightRoute.version}`
    *
    * if the `library` prop is `undefined`, `href` defaults to:
-   * - defaults to `${Astro.url.origin}/release/tauri/v${Astro.props.version}`
+   * - defaults to `${Astro.url.origin}/release/tauri/v${Astro.locals.starlightRoute.version}`
    */
   href?: string;
 }
@@ -39,14 +39,14 @@ interface Props {
 
 <a
   class="not-content"
-  href={Astro.props.href
-    ? Astro.props.href
-    : Astro.props.library
-      ? `${Astro.url.origin}/release/${Astro.props.library}/v${Astro.props.version}`
-      : `${Astro.url.origin}/release/tauri/v${Astro.props.version}`}
+  href={Astro.locals.starlightRoute.href
+    ? Astro.locals.starlightRoute.href
+    : Astro.locals.starlightRoute.library
+      ? `${Astro.url.origin}/release/${Astro.locals.starlightRoute.library}/v${Astro.locals.starlightRoute.version}`
+      : `${Astro.url.origin}/release/tauri/v${Astro.locals.starlightRoute.version}`}
   target="_blank"
 >
-  <Icon name="seti:clock" />Since <code>{Astro.props.version}</code>
+  <Icon name="seti:clock" />Since <code>{Astro.locals.starlightRoute.version}</code>
 </a>
 
 <style>

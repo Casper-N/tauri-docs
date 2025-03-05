@@ -1,5 +1,5 @@
 ---
-const { section } = Astro.props;
+const { section } = Astro.locals.starlightRoute;
 import { createMarkdownProcessor } from '@astrojs/markdown-remark';
 import { JSDOM } from 'jsdom';
 import { join, dirname } from 'path';

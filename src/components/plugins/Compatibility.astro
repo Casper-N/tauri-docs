@@ -3,7 +3,7 @@ import { type PluginData, getSupportIcon, getSupportText } from './_helpers';
 import data from './_tableContent.json';
 import { createMarkdownProcessor } from '@astrojs/markdown-remark';
 
-const { plugin } = Astro.props;
+const { plugin } = Astro.locals.starlightRoute;
 
 interface Props {
   plugin: string;

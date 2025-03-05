@@ -50,13 +50,13 @@ function compareOrder(a: Route, b: Route): boolean {
   return a.entry.data.sidebar.order > b.entry.data.sidebar.order;
 }
 
-let { slug } = Astro.props;
+let { slug } = Astro.locals.starlightRoute;
 const {
   filterOutByTitle = [],
   filterOutByFileName = [],
   sortAlphabetically = false,
   callback,
-} = Astro.props;
+} = Astro.locals.starlightRoute;
 
 const defaultLocale = config.defaultLocale.lang || 'en';
 const localesList = config.isMultilingual ? Object.keys(config.locales) : [defaultLocale];

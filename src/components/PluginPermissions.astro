@@ -8,7 +8,7 @@ interface Props {
   plugin: string;
 }
 
-const { plugin } = Astro.props;
+const { plugin } = Astro.locals.starlightRoute;
 
 async function importMDX(plugin: string): Promise<string> {
   const base = fileURLToPath(import.meta.url);
